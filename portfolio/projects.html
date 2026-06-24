@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Prasanna Adepu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .proj-list-pg { padding: 28px 24px; display: grid; gap: 16px; max-width: 1000px; margin: 0 auto; }
+    .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .proj-card {
+      background: var(--surface); border: 0.5px solid var(--line);
+      border-radius: var(--r-lg); padding: 22px;
+      cursor: pointer; transition: border-color .15s; text-decoration: none; display: block;
+    }
+    .proj-card:hover { border-color: var(--line2); }
+    .proj-card-num { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .proj-card-name { font-family: var(--display); font-size: 17px; font-weight: 800; letter-spacing: -0.4px; color: var(--ink); margin-bottom: 8px; }
+    .proj-card-desc { font-size: 13px; color: var(--ink2); line-height: 1.7; margin-bottom: 12px; }
+    .proj-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .proj-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 0.5px solid var(--line); }
+    .proj-card-type { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+    .proj-card-link { font-size: 13px; color: var(--blue); display: flex; align-items: center; gap: 4px; }
+    @media (max-width: 680px) { .proj-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-wrap">
+    <div class="proj-list-pg">
+      <div>
+        <div class="sec-eyebrow">All Projects</div>
+        <div class="sec-title">Things I've built.</div>
+      </div>
+
+      <div class="proj-grid">
+        <a class="proj-card" href="p1.html">
+          <div class="proj-card-num" style="color:var(--blue)">01 · Live · Full-stack</div>
+          <div class="proj-card-name">MRECW Results Portal</div>
+          <div class="proj-card-desc">A production-deployed academic analytics platform for students to instantly access results, backlogs, class rankings, and credit analysis — no login required. Built with a cache-first Firebase architecture and a Playwright scraping pipeline.</div>
+          <div class="proj-card-tags"><span class="sp blue">React 18</span><span class="sp teal">Flask</span><span class="sp coral">Firebase</span><span class="sp green">Docker</span></div>
+          <div class="proj-card-footer"><span class="proj-card-type" style="color:var(--teal)">Live on Vercel</span><span class="proj-card-link">Open <i class="ti ti-arrow-right" style="font-size:13px"></i></span></div>
+        </a>
+
+        <a class="proj-card" href="p2.html">
+          <div class="proj-card-num" style="color:var(--purple)">02 · Live · Research · Full-stack</div>
+          <div class="proj-card-name">ASAF</div>
+          <div class="proj-card-desc">AI-Enhanced Smart Antenatal Framework — a full-stack research prototype for pregnancy risk monitoring by Lady Health Workers in low-connectivity field environments, with offline sync, ML risk prediction at 86.2% accuracy, and role-based access control.</div>
+          <div class="proj-card-tags"><span class="sp purple">FastAPI</span><span class="sp amber">Random Forest</span><span class="sp blue">JWT Auth</span></div>
+          <div class="proj-card-footer"><span class="proj-card-type" style="color:var(--teal)">Live on Vercel</span><span class="proj-card-link">Open <i class="ti ti-arrow-right" style="font-size:13px"></i></span></div>
+        </a>
+
+        <a class="proj-card" href="p3.html">
+          <div class="proj-card-num" style="color:var(--teal)">03 · Live · SaaS · Full-stack</div>
+          <div class="proj-card-name">BizEase</div>
+          <div class="proj-card-desc">A mobile-first Micro-SaaS platform enabling kirana stores, cafes, and pharmacies to digitize billing, inventory management, and customer credit (khata) tracking entirely from a smartphone — with OCR invoice scanning and instant WhatsApp receipts.</div>
+          <div class="proj-card-tags"><span class="sp teal">React 19</span><span class="sp coral">Supabase</span><span class="sp amber">OCR</span><span class="sp purple">Twilio</span></div>
+          <div class="proj-card-footer"><span class="proj-card-type" style="color:var(--teal)">Live on Vercel</span><span class="proj-card-link">Open <i class="ti ti-arrow-right" style="font-size:13px"></i></span></div>
+        </a>
+
+        <a class="proj-card" href="p4.html">
+          <div class="proj-card-num" style="color:var(--coral)">04 · AI · Web App</div>
+          <div class="proj-card-name">Deepfake Detection</div>
+          <div class="proj-card-desc">A full-stack AI web application that detects deepfakes and sensitive content in images using Google Cloud Vision API via Supabase Edge Functions, with a React drag-and-drop interface and a 0.6 confidence threshold to reduce false positives.</div>
+          <div class="proj-card-tags"><span class="sp blue">React</span><span class="sp blue">TypeScript</span><span class="sp coral">Cloud Vision</span><span class="sp gray">Supabase</span></div>
+          <div class="proj-card-footer"><span class="proj-card-type" style="color:var(--coral)">AI detection</span><span class="proj-card-link">Open <i class="ti ti-arrow-right" style="font-size:13px"></i></span></div>
+        </a>
+
+        <a class="proj-card" href="p5.html" style="grid-column:span 2">
+          <div class="proj-card-num" style="color:var(--amber)">05 · ML · Deep Learning</div>
+          <div class="proj-card-name">Accident Detection Using CNNs</div>
+          <div class="proj-card-desc">A CNN-based deep learning system that detects road accidents from images and live video streams in real time using TensorFlow, Keras, and OpenCV, with an automated alert generation pipeline to accelerate emergency response and reduce reaction time.</div>
+          <div class="proj-card-tags"><span class="sp amber">TensorFlow</span><span class="sp amber">Keras</span><span class="sp amber">PyTorch</span><span class="sp gray">OpenCV</span><span class="sp teal">Python</span></div>
+          <div class="proj-card-footer"><span class="proj-card-type" style="color:var(--amber)">Deep learning</span><span class="proj-card-link">Open <i class="ti ti-arrow-right" style="font-size:13px"></i></span></div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav-inject.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

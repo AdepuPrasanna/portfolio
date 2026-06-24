@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Prasanna Adepu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about { padding: 28px 24px; display: grid; gap: 16px; max-width: 1000px; margin: 0 auto; }
+    .edu-block { display: flex; align-items: flex-start; gap: 16px; }
+    .edu-icon {
+      width: 40px; height: 40px; background: var(--blue-bg);
+      border-radius: var(--r-sm); display: flex; align-items: center;
+      justify-content: center; color: var(--blue); font-size: 18px; flex-shrink: 0;
+    }
+    .edu-deg { font-weight: 600; font-size: 14px; color: var(--ink); line-height: 1.35; }
+    .edu-school { font-size: 12.5px; color: var(--ink3); margin-top: 3px; }
+    .cgpa {
+      display: inline-block; background: var(--teal-bg); color: var(--teal);
+      font-size: 11px; font-weight: 600; padding: 3px 11px;
+      border-radius: var(--r-sm); margin-top: 8px;
+    }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 6px; }
+    .sk-group h4 { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink3); margin-bottom: 8px; }
+    .bc-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink3); margin-bottom: 14px; }
+
+    .intern-card { background: var(--surface); border: 0.5px solid var(--line); border-radius: var(--r-lg); padding: 22px; }
+    .intern-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 4px; }
+    .intern-co { font-family: var(--display); font-weight: 800; font-size: 16px; color: var(--ink); letter-spacing: -0.3px; }
+    .intern-role { font-size: 12.5px; color: var(--ink3); margin-top: 2px; }
+    .date-chip { background: var(--surface3); color: var(--ink2); font-size: 11.5px; font-weight: 500; padding: 4px 11px; border-radius: var(--r-sm); white-space: nowrap; flex-shrink: 0; }
+    .type-chip { display: inline-block; font-size: 10.5px; font-weight: 600; padding: 3px 9px; border-radius: var(--r-sm); margin-top: 6px; margin-bottom: 14px; letter-spacing: 0.4px; }
+
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+    .cert-item { background: var(--surface2); border-radius: var(--r-sm); padding: 12px 14px; border: 0.5px solid var(--line); }
+    .cert-prov { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--blue); margin-bottom: 3px; }
+    .cert-name { font-size: 12.5px; color: var(--ink2); line-height: 1.5; }
+
+    @media (max-width: 680px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-wrap">
+    <div class="about">
+      <div>
+        <div class="sec-eyebrow">About</div>
+        <div class="sec-title">Engineer. Builder. Problem solver.</div>
+      </div>
+
+      <!-- Education -->
+      <div class="card">
+        <div class="edu-block">
+          <div class="edu-icon"><i class="ti ti-school"></i></div>
+          <div>
+            <div class="edu-deg">B.Tech – Computer Science Engineering</div>
+            <div class="edu-school">Malla Reddy Engineering College for Women, Hyderabad · Expected July 2027</div>
+            <span class="cgpa">CGPA 9.05 / 10.0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="card">
+        <div class="bc-label">Technical skills</div>
+        <div class="skills-grid">
+          <div class="sk-group"><h4>Languages</h4><div class="stack-pills"><span class="sp blue">Java</span><span class="sp blue">Python</span><span class="sp blue">TypeScript</span><span class="sp blue">JavaScript</span><span class="sp gray">C</span></div></div>
+          <div class="sk-group"><h4>Frontend</h4><div class="stack-pills"><span class="sp teal">React</span><span class="sp teal">Next.js</span><span class="sp teal">Vite</span><span class="sp teal">Tailwind CSS</span></div></div>
+          <div class="sk-group"><h4>Backend</h4><div class="stack-pills"><span class="sp purple">Node.js</span><span class="sp purple">Express</span><span class="sp purple">Flask</span><span class="sp purple">FastAPI</span></div></div>
+          <div class="sk-group"><h4>Databases &amp; cloud</h4><div class="stack-pills"><span class="sp coral">MongoDB</span><span class="sp coral">PostgreSQL</span><span class="sp coral">Firebase</span><span class="sp coral">Supabase</span><span class="sp green">Docker</span></div></div>
+          <div class="sk-group"><h4>ML / AI</h4><div class="stack-pills"><span class="sp amber">TensorFlow</span><span class="sp amber">PyTorch</span><span class="sp amber">Scikit-learn</span><span class="sp amber">OpenCV</span><span class="sp amber">OCR</span></div></div>
+          <div class="sk-group"><h4>Tools</h4><div class="stack-pills"><span class="sp gray">Git</span><span class="sp gray">Playwright</span><span class="sp gray">JWT Auth</span><span class="sp gray">Agile / Scrum</span></div></div>
+        </div>
+      </div>
+
+      <div class="sec-eyebrow" style="margin-top:4px">Internship Experience</div>
+
+      <!-- Coursevita -->
+      <div class="intern-card">
+        <div class="intern-top">
+          <div><div class="intern-co">Coursevita</div><div class="intern-role">Software Development Intern · Remote</div></div>
+          <span class="date-chip">Jul 2025 – Sep 2025</span>
+        </div>
+        <span class="type-chip" style="background:var(--blue-bg);color:var(--blue)">Full-stack · AI / OCR</span>
+        <ul class="bullet-list">
+          <li>Built a Flask-based web and mobile application for AI-powered OCR document scanning, extracting and structuring key information from ID cards and job forms as part of a production release cycle.</li>
+          <li>Designed a Flask + MongoDB backend with percentage-match validation; integrated an AI image-to-text pipeline achieving high-accuracy data extraction at scale from diverse document formats.</li>
+          <li>Collaborated in a cross-functional scrum team to integrate new tools into existing distributed workflows, contributing to automated test suites and real-time monitoring dashboards.</li>
+        </ul>
+      </div>
+
+      <!-- Trivexa -->
+      <div class="intern-card">
+        <div class="intern-top">
+          <div><div class="intern-co">Trivexa Technologies Private Limited</div><div class="intern-role">Backend Developer Intern</div></div>
+          <span class="date-chip">May 2026 – Jun 2026</span>
+        </div>
+        <span class="type-chip" style="background:var(--purple-bg);color:var(--purple)">Backend Development</span>
+        <ul class="bullet-list">
+          <li>Contributed to backend development projects demonstrating excellent technical skills, dedication, and problem-solving abilities while working on organizational objectives at Trivexa Technologies.</li>
+          <li>Delivered backend solutions and participated in development cycles, earning recognition for professionalism and strong contributions to project goals.</li>
+          <li>Certificate ID: TRV-INT-2026-001 · Signed off by A. Sukumar, Founder &amp; CEO · Issued June 30, 2026</li>
+        </ul>
+      </div>
+
+      <!-- VaultofCodes -->
+      <div class="intern-card">
+        <div class="intern-top">
+          <div><div class="intern-co">VaultofCodes</div><div class="intern-role">Web Development Intern</div></div>
+          <span class="date-chip">Aug 2025 · 1 month</span>
+        </div>
+        <span class="type-chip" style="background:var(--teal-bg);color:var(--teal)">Web Development</span>
+        <ul class="bullet-list">
+          <li>Completed a 1-month web development internship at VaultofCodes.in, building hands-on experience with frontend and web technologies in a structured learning environment.</li>
+          <li>Delivered project work verified by VaultofCodes (Google for Education Partner), starting from 05/08/2025. Certificate issued by Founder Kartik Ahlawat and HR Manager Varshita Singh.</li>
+        </ul>
+      </div>
+
+      <!-- Certifications -->
+      <div class="card">
+        <div class="bc-label">Certifications</div>
+        <div class="cert-grid">
+          <div class="cert-item"><div class="cert-prov">Cisco</div><div class="cert-name">Programming Essentials in C, C Advanced, Python, Network Essentials</div></div>
+          <div class="cert-item"><div class="cert-prov">Oracle</div><div class="cert-name">Java Programming, SQL Fundamentals, Certified Oracle Professional</div></div>
+          <div class="cert-item"><div class="cert-prov">Microsoft Azure</div><div class="cert-name">Cloud Infrastructure &amp; AI</div></div>
+          <div class="cert-item"><div class="cert-prov">Infosys Springboard</div><div class="cert-name">Java Programming 2024</div></div>
+          <div class="cert-item" style="grid-column:span 2"><div class="cert-prov">Cambridge</div><div class="cert-name">English for Employability</div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav-inject.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

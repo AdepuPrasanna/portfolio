@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BizEase — Prasanna Adepu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-wrap">
+    <div class="proj-page">
+      <a class="back-btn" href="projects.html"><i class="ti ti-arrow-left" style="font-size:13px"></i> All projects</a>
+
+      <div class="proj-hero-card">
+        <div class="proj-num" style="color:var(--teal)">Project 03 · Live · SaaS · Full-stack</div>
+        <div class="proj-name">BizEase — Local Biz Digitizer</div>
+        <div class="proj-tagline">A mobile-first Micro-SaaS platform that helps kirana stores, cafes, and pharmacies digitize their entire business — billing, inventory, customer credit tracking, and supplier invoice processing — all from a smartphone with no POS hardware. Built on Supabase (PostgreSQL) with Twilio WhatsApp integration and Tesseract.js OCR.</div>
+        <div class="proj-meta">
+          <span class="sp teal">React 19</span><span class="sp purple">Node.js / Express</span>
+          <span class="sp coral">Supabase (PostgreSQL)</span><span class="sp amber">Tesseract.js OCR</span>
+          <span class="sp blue">Twilio WhatsApp</span><span class="sp green">Docker</span>
+        </div>
+        <div class="proj-links-row">
+          <a class="plink live" href="https://local-biz-digitizer.vercel.app" target="_blank"><i class="ti ti-external-link" style="font-size:14px"></i>Live site</a>
+          <a class="plink" href="https://github.com/AdepuPrasanna" target="_blank"><i class="ti ti-brand-github" style="font-size:14px"></i>GitHub</a>
+        </div>
+      </div>
+
+      <div class="arch-card">
+        <div class="arch-label">Platform architecture</div>
+        <div class="arch-flow">
+          <div class="an">React 19<small>Vercel</small></div><div class="arr">→</div>
+          <div class="an">Express API<small>Render · Docker</small></div><div class="arr">→</div>
+          <div class="an">Supabase<small>PostgreSQL + RLS</small></div><div class="arr">+</div>
+          <div class="an">Tesseract.js<small>OCR engine</small></div><div class="arr">+</div>
+          <div class="an">Twilio<small>WhatsApp API</small></div>
+        </div>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--amber-bg);color:var(--amber)"><i class="ti ti-file-scan"></i></div>
+          <div class="feat-title">AI-powered bill scanner</div>
+          <div class="feat-desc">Shop owners snap supplier invoices and Tesseract.js OCR automatically extracts product names, quantities, unit prices, and GST values — directly updating inventory. Low-confidence extractions are flagged for a manual correction workflow before saving.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--teal-bg);color:var(--teal)"><i class="ti ti-brand-whatsapp"></i></div>
+          <div class="feat-title">Instant WhatsApp receipts</div>
+          <div class="feat-desc">After each billing transaction, a formatted digital receipt is sent to the customer's WhatsApp via Twilio API — no paper printing, no email setup. Customers get itemized bills with totals, discounts, and business contact instantly on their phone.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--coral-bg);color:var(--coral)"><i class="ti ti-credit-card"></i></div>
+          <div class="feat-title">Khata credit ledger</div>
+          <div class="feat-desc">A complete credit and payment ledger for each customer — tracks outstanding balances, records partial payments, and maintains a full transaction history. Real-time balance updates on every billing or payment event.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="ti ti-shield"></i></div>
+          <div class="feat-title">Secure multi-tenant SaaS</div>
+          <div class="feat-desc">Supabase Row Level Security (RLS) ensures each shop can only read and write its own data. JWT authentication via Supabase Auth, a full Admin Console for platform-wide management, and a service_role key for safe server-side database access.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav-inject.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
