@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASAF — Prasanna Adepu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-wrap">
+    <div class="proj-page">
+      <a class="back-btn" href="projects.html"><i class="ti ti-arrow-left" style="font-size:13px"></i> All projects</a>
+
+      <div class="proj-hero-card">
+        <div class="proj-num" style="color:var(--purple)">Project 02 · Live · Research · Full-stack</div>
+        <div class="proj-name">ASAF — AI-Enhanced Smart Antenatal Framework</div>
+        <div class="proj-tagline">A full-stack research prototype for cross-device pregnancy risk monitoring by Lady Health Workers operating in low-connectivity rural environments. The system features a trained Random Forest model for risk prediction, a last-write-wins offline sync algorithm, and a strict role-based access control model — all documented in an academic research paper.</div>
+        <div class="proj-meta">
+          <span class="sp purple">FastAPI</span><span class="sp purple">Python</span>
+          <span class="sp gray">SQLite</span><span class="sp amber">Random Forest ML</span>
+          <span class="sp blue">JWT Auth</span><span class="sp teal">React (Babel)</span>
+        </div>
+        <div class="proj-links-row">
+          <a class="plink live" href="https://asaf-two.vercel.app" target="_blank"><i class="ti ti-external-link" style="font-size:14px"></i>Live site</a>
+          <a class="plink" href="https://github.com/AdepuPrasanna" target="_blank"><i class="ti ti-brand-github" style="font-size:14px"></i>GitHub</a>
+        </div>
+      </div>
+
+      <div class="arch-card">
+        <div class="arch-label">System flow</div>
+        <div class="arch-flow">
+          <div class="an">React SPA<small>Single HTML file</small></div><div class="arr">→</div>
+          <div class="an">FastAPI<small>REST + JWT</small></div><div class="arr">→</div>
+          <div class="an">SQLite<small>Per-user isolation</small></div><div class="arr">+</div>
+          <div class="an">Random Forest<small>86.2% accuracy</small></div><div class="arr">+</div>
+          <div class="an">Offline queue<small>Sync on reconnect</small></div>
+        </div>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--amber-bg);color:var(--amber)"><i class="ti ti-brain"></i></div>
+          <div class="feat-title">AI pregnancy risk prediction</div>
+          <div class="feat-desc">A trained Random Forest model achieves 86.2% accuracy classifying antenatal risk levels from patient vitals. When connectivity is unavailable, the system falls back to an on-device decision tree so health workers can still make risk assessments in the field.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-wifi-off"></i></div>
+          <div class="feat-title">Offline-first sync</div>
+          <div class="feat-desc">Patient registrations and risk examinations are queued locally when offline. On reconnect, POST /api/sync applies them using last-write-wins conflict resolution (Algorithm 1 from the research paper). A simulated field conflict demo is built into the Sync tab.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--teal-bg);color:var(--teal)"><i class="ti ti-shield-lock"></i></div>
+          <div class="feat-title">Production-grade security</div>
+          <div class="feat-desc">Passwords hashed with PBKDF2-HMAC-SHA256 at 100,000 iterations. JWT-based session management with short-lived tokens. Per-user data isolation enforced at the query layer. Full audit log of logins, edits, and syncs across all user types.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="ti ti-users"></i></div>
+          <div class="feat-title">Three-tier role system</div>
+          <div class="feat-desc">Admin oversees the entire platform and manages all accounts. Health Workers manage only their own patient records. Patient accounts get a companion view with pregnancy timelines, health tips, and appointment reminders.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav-inject.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

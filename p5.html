@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accident Detection CNN — Prasanna Adepu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-wrap">
+    <div class="proj-page">
+      <a class="back-btn" href="projects.html"><i class="ti ti-arrow-left" style="font-size:13px"></i> All projects</a>
+
+      <div class="proj-hero-card">
+        <div class="proj-num" style="color:var(--amber)">Project 05 · ML · Deep Learning</div>
+        <div class="proj-name">Accident Detection Using CNNs</div>
+        <div class="proj-tagline">A convolutional neural network system that detects road accidents from both static images and live video streams in real time. The pipeline uses TensorFlow and Keras for model training, PyTorch for experimentation, and OpenCV for video frame extraction and inference — with an automated alert generation system that triggers immediately on accident detection to accelerate emergency response.</div>
+        <div class="proj-meta">
+          <span class="sp amber">TensorFlow</span><span class="sp amber">Keras</span>
+          <span class="sp amber">PyTorch</span><span class="sp gray">OpenCV</span><span class="sp teal">Python</span>
+        </div>
+        <div class="proj-links-row">
+          <a class="plink" href="https://github.com/AdepuPrasanna" target="_blank"><i class="ti ti-brand-github" style="font-size:14px"></i>GitHub</a>
+        </div>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--amber-bg);color:var(--amber)"><i class="ti ti-cpu"></i></div>
+          <div class="feat-title">CNN model architecture</div>
+          <div class="feat-desc">A multi-layer convolutional neural network trained to classify accident vs. non-accident frames from road imagery. Built and trained in TensorFlow/Keras with careful data augmentation and class imbalance handling — since accident footage is naturally rare in real-world datasets.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--teal-bg);color:var(--teal)"><i class="ti ti-player-play"></i></div>
+          <div class="feat-title">Real-time video inference</div>
+          <div class="feat-desc">OpenCV handles video capture and frame-by-frame extraction from both live camera feeds and pre-recorded clips. Each frame is preprocessed and passed through the CNN at inference time, enabling continuous real-time monitoring of road conditions.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--coral-bg);color:var(--coral)"><i class="ti ti-bell"></i></div>
+          <div class="feat-title">Automated alert pipeline</div>
+          <div class="feat-desc">When the CNN detects an accident frame above the confidence threshold, an alert is generated and dispatched automatically — designed to integrate with emergency response systems and reduce the time between accident occurrence and first responder notification.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--purple-bg);color:var(--purple)"><i class="ti ti-stack-2"></i></div>
+          <div class="feat-title">Dual-framework ML pipeline</div>
+          <div class="feat-desc">TensorFlow/Keras handles production model training and export, while PyTorch is used for experimentation and architecture comparison. This dual-framework setup allows iterating on model design without being locked into a single ecosystem.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav-inject.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

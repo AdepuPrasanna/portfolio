@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepfake Detection — Prasanna Adepu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-wrap">
+    <div class="proj-page">
+      <a class="back-btn" href="projects.html"><i class="ti ti-arrow-left" style="font-size:13px"></i> All projects</a>
+
+      <div class="proj-hero-card">
+        <div class="proj-num" style="color:var(--coral)">Project 04 · AI · Web App</div>
+        <div class="proj-name">Deepfake Detection</div>
+        <div class="proj-tagline">A full-stack AI-powered web application that detects deepfakes and classifies sensitive content in uploaded images. It integrates Google Cloud Vision API via Supabase Edge Functions for server-side inference, keeping credentials secure while returning per-category confidence scores to a React frontend with drag-and-drop upload and a visual results dashboard.</div>
+        <div class="proj-meta">
+          <span class="sp blue">React</span><span class="sp blue">TypeScript</span><span class="sp blue">Vite</span>
+          <span class="sp coral">Google Cloud Vision API</span>
+          <span class="sp gray">Supabase Edge Functions</span><span class="sp purple">Node.js</span>
+        </div>
+        <div class="proj-links-row">
+          <a class="plink" href="https://github.com/AdepuPrasanna" target="_blank"><i class="ti ti-brand-github" style="font-size:14px"></i>GitHub</a>
+        </div>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--coral-bg);color:var(--coral)"><i class="ti ti-eye"></i></div>
+          <div class="feat-title">Real-time AI classification</div>
+          <div class="feat-desc">Google Cloud Vision API runs inference on uploaded images and returns confidence scores for multiple harm categories including deepfakes, adult content, violent material, and harassment. Results render instantly on the dashboard alongside visual confidence bars.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="ti ti-upload"></i></div>
+          <div class="feat-title">Drag-and-drop interface</div>
+          <div class="feat-desc">A modular React + TypeScript frontend supports drag-and-drop or click-to-upload image input. The results dashboard displays per-category scores, a final verdict (safe / flagged), and a confidence breakdown — all rendered without page reload.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--amber-bg);color:var(--amber)"><i class="ti ti-adjustments"></i></div>
+          <div class="feat-title">Smart confidence threshold</div>
+          <div class="feat-desc">A 0.6 confidence threshold filters out low-signal detections before flagging content as harmful, significantly reducing false positives. The threshold is configurable in backend logic without frontend changes, making it easy to tune for different use cases.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--teal-bg);color:var(--teal)"><i class="ti ti-lock"></i></div>
+          <div class="feat-title">Secure server-side inference</div>
+          <div class="feat-desc">All API calls to Google Cloud Vision are routed through Supabase Edge Functions, ensuring credentials are never exposed to the browser. The frontend only receives processed classification results — the raw Vision API response stays entirely server-side.</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav-inject.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

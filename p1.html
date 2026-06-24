@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MRECW Results Portal — Prasanna Adepu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-wrap">
+    <div class="proj-page">
+      <a class="back-btn" href="projects.html"><i class="ti ti-arrow-left" style="font-size:13px"></i> All projects</a>
+
+      <div class="proj-hero-card">
+        <div class="proj-num" style="color:var(--blue)">Project 01 · Live · Full-stack</div>
+        <div class="proj-name">MRECW Results Portal</div>
+        <div class="proj-tagline">A production-deployed academic analytics platform serving students of Malla Reddy Engineering College for Women. Students can instantly access complete semester results, backlog reports, class rankings, credits analysis, and SGPA/CGPA growth charts — all without creating an account or logging in. Built on a cache-first Firebase Firestore architecture with a Playwright-powered scraping backend.</div>
+        <div class="proj-meta">
+          <span class="sp blue">React 18</span><span class="sp blue">TypeScript</span>
+          <span class="sp teal">Flask</span><span class="sp teal">Playwright</span>
+          <span class="sp coral">Firebase Firestore</span><span class="sp green">Docker</span>
+          <span class="sp gray">Vercel</span><span class="sp gray">Render</span>
+        </div>
+        <div class="proj-links-row">
+          <a class="plink live" href="https://malla-reddy-women-s-engineering-res.vercel.app" target="_blank"><i class="ti ti-external-link" style="font-size:14px"></i>Live site</a>
+          <a class="plink" href="https://github.com/AdepuPrasanna/malla-reddy-women-s-engineering-results-website" target="_blank"><i class="ti ti-brand-github" style="font-size:14px"></i>GitHub</a>
+        </div>
+      </div>
+
+      <div class="arch-card">
+        <div class="arch-label">System architecture</div>
+        <div class="arch-flow">
+          <div class="an">React SPA<small>Vercel CDN</small></div><div class="arr">→</div>
+          <div class="an">Flask API<small>Render · Docker</small></div><div class="arr">→</div>
+          <div class="an">Firestore<small>Cache layer</small></div><div class="arr">→</div>
+          <div class="an">Playwright<small>Cache miss only</small></div><div class="arr">→</div>
+          <div class="an">MRECW Portal<small>Official source</small></div>
+        </div>
+      </div>
+
+      <div class="feat-grid">
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--blue-bg);color:var(--blue)"><i class="ti ti-database"></i></div>
+          <div class="feat-title">Cache-first architecture</div>
+          <div class="feat-desc">Firebase Firestore serves cached results instantly on a cache hit. On a cache miss, Playwright scrapes the official MRECW portal, saves data to Firestore, and returns it. A background refresh keeps cached data current without blocking the user.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--teal-bg);color:var(--teal)"><i class="ti ti-chart-bar"></i></div>
+          <div class="feat-title">Rich academic analytics</div>
+          <div class="feat-desc">Per-semester SGPA and cumulative CGPA growth charts built with Recharts, section-wise class rankings seeded from a sample hall ticket, backlog subject tracking, and a credits analyzer showing earned vs. required progress.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--amber-bg);color:var(--amber)"><i class="ti ti-brand-docker"></i></div>
+          <div class="feat-title">Multi-stage Docker deploy</div>
+          <div class="feat-desc">A single Dockerfile handles a React build stage and a Python/Playwright runtime stage. The final image runs on Render with Gunicorn while Vercel serves the static frontend via CDN — zero infrastructure overlap.</div>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon" style="background:var(--green-bg);color:var(--green)"><i class="ti ti-rocket"></i></div>
+          <div class="feat-title">95+ Lighthouse performance</div>
+          <div class="feat-desc">Lazy-loaded routes, vendor/charts/motion code splitting, React Query stale-while-revalidate caching, skeleton loaders, and SSE streaming for class-wide batch fetches — targeting 100 SEO, 100 Accessibility, and 95+ Performance scores.</div>
+        </div>
+      </div>
+
+      <div class="highlights-card">
+        <div class="highlights-label">Key highlights</div>
+        <ul class="bullet-list">
+          <li>Hall ticket search with persisted local history, autocomplete suggestions, and a side-by-side result comparison view for any two students</li>
+          <li>Dark / light mode with persisted user preference; collapsible sidebar for desktop and bottom navigation bar for mobile</li>
+          <li>No login required at any point — privacy-first design using only hall ticket number for data retrieval</li>
+          <li>SSE streaming endpoint enables real-time progress updates during class-wide result batch fetching across many roll numbers</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="nav-inject.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
